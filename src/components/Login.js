@@ -1,6 +1,13 @@
+import {useState} from "react";
 import Header from "./Header";
 
 const Login = () => {
+    const [isSignInForm, setIsSignInForm] = useState(true);
+
+    const toggleSignInForm = () => {
+        setIsSignInForm(!isSignInForm);
+    }
+
     return (
         <div>
             <Header />
@@ -12,7 +19,16 @@ const Login = () => {
             </div>
             <form className="absolute w-1/3 p-12 my-24 mx-auto right-0 left-0 
                 bg-black text-white bg-opacity-80 rounded">
-                <h1 className="font-bold text-3xl py-4">Sign In</h1>
+                <h1 className="font-bold text-3xl py-4">
+                    {isSignInForm ? "Sign In" : "Sign Up"}
+                </h1>
+                {!isSignInForm && (
+                <input 
+                    className="p-4 my-4 w-full rounded bg-black bg-opacity-50
+                    border border-slate-400" 
+                    type="text" placeholder="Full Name" 
+                 />
+                )}
                 <input 
                     className="p-4 my-4 w-full rounded bg-black bg-opacity-50
                     border border-slate-400" 
@@ -24,10 +40,20 @@ const Login = () => {
                     type="password" placeholder="Password" 
                 />
                 <button className="p-2 my-4 w-full rounded bg-red-700">
-                    Sign In
+                    {isSignInForm ? "Sign In" : "Sign Up"}
                 </button>
-                <p className="py-4 text-slate-400">New to Netflix? 
-                    <span className="font-bold text-white">Sign Up Now</span>
+                <p className="py-4 text-slate-400" onClick={toggleSignInForm}> 
+                    {isSignInForm ? "New to Netflix? " : "Already Registered? "}
+                    {isSignInForm 
+                      ? (<span 
+                           className="font-bold text-white cursor-pointer 
+                           hover:underline"
+                        >Sign Up Now.</span>)
+                      : (<span 
+                           className="font-bold text-white cursor-pointer 
+                           hover:underline"
+                        >Sign In Now.</span>)
+                    }
                 </p>
             </form>
         </div>

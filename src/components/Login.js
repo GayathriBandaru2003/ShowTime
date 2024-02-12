@@ -10,6 +10,7 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
 
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -76,6 +77,7 @@ const Login = () => {
           <input
             className="p-4 my-4 w-full rounded bg-black bg-opacity-50
                     border border-slate-400"
+            ref={name}
             type="text"
             placeholder="Full Name"
           />

@@ -1,7 +1,7 @@
 import Header from "./Header";
 
 
-const Browser = () => {
+const Browse = () => {
     return  (
         <div>
             <Header />
@@ -9,4 +9,4 @@ const Browser = () => {
     );
 };
 
-export default Browser;
+export default Browse;

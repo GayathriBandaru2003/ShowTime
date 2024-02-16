@@ -11,6 +11,7 @@ const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const user = useSelector((store) => store.user);
+    const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
 
     const handleSignOut = () => {
         signOut(auth).then(() => {})
@@ -54,7 +55,7 @@ const Header = () => {
                 <button className="px-2 py-1 mx-2 rounded-sm bg-red-600 hover:bg-opacity-80"
                         onClick={handleGptSearchClick}
                 >
-                  GPT Search
+                  {showGptSearch ? "Home Page" : "GPT Search"}
                 </button>
                 <img className="rounded-sm h-8 w-8"
                    src = {USER_AVATAR}

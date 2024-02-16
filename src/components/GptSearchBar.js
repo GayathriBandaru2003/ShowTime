@@ -8,7 +8,7 @@ const GptSearchBar = () => {
                     placeholder="What would you like to watch?"
                 />
                 <button
-                    className="text-white col-span-3 px-2 m-2 rounded-sm bg-red-600"
+                    className="text-white col-span-3 px-2 m-2 rounded-sm bg-red-600 hover:bg-red-700"
                 >
                     Search
                 </button>

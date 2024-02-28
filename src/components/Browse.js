@@ -17,6 +17,10 @@ const Browse = () => {
     useTopRatedMovies();
     useUpcomingMovies();
 
+    const movies = useSelector((store) => store?.movies?.nowPlayingMovies);
+    if(movies === null)
+    return <h1>Loading...</h1>
+
     return  (
         <div>
             <Header />
@@ -24,8 +28,8 @@ const Browse = () => {
                 <GptSearchPage />
             ) : (
             <>
-               <MainContainer />
-               <SecondaryContainer />
+              <MainContainer />
+                  <SecondaryContainer />
             </>
             )}
         </div>

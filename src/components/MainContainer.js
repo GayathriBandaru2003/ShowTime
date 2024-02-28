@@ -7,7 +7,7 @@ const MainContainer = () => {
     const movies = useSelector((store) => store?.movies?.nowPlayingMovies);
     
     const mainMovie = movies[16];
-    //console.log(mainMovie);
+    console.log(process.env.REACT_APP_TMDB_KEY);
     const { original_title, overview, id } = mainMovie;
 
     return (

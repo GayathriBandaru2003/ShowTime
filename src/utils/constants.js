@@ -20,4 +20,11 @@ export const BANNER_INFO = {
   overview: "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
 }
 
+export const API_URL = "https://api.tvmaze.com";
+
+export const urlConstants = {
+  apiBaseUrl: API_URL,
+  fetchShowsUrl: `${API_URL}/shows`,
+};
+
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

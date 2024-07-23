@@ -7,11 +7,13 @@ import Header from "./Header";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import GptSearchPage from "./GptSearchPage";
+import useAllShows from "../hooks/useAllShows";
 
 
 const Browse = () => {
     const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
+    useAllShows();
     useNowPlayingMovies();
     usePopularMovies();
     useTopRatedMovies();

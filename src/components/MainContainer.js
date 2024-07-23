@@ -1,19 +1,15 @@
 import VideoTitle from "./VideoTitle";
 import VideoBackground from "./VideoBackground";
-import { useSelector } from "react-redux";
+import { BANNER_INFO } from "../utils/constants";
 
 const MainContainer = () => {
 
-    const movies = useSelector((store) => store?.movies?.nowPlayingMovies);
-    
-    const mainMovie = movies[16];
-    console.log(process.env.REACT_APP_TMDB_KEY);
-    const { original_title, overview, id } = mainMovie;
+    const { key, original_title, overview } = BANNER_INFO;
 
     return (
-        <div>
+        <div className="w-full overflow-x-hidden m-0 p-0">
             <VideoTitle title={original_title} overview={overview} />
-            <VideoBackground movieId={id}/>
+            <VideoBackground showKey={key}/>
         </div>
     );
 };

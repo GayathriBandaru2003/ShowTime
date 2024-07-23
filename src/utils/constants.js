@@ -14,4 +14,10 @@ export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
 export const BG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/4da5d2b1-1b22-498d-90c0-4d86701dffcc/98a1cb1e-5a1d-4b98-a46f-995272b632dd/IN-en-20240129-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
 
+export const BANNER_INFO = {
+  key: "DotnJ7tTA34",
+  original_title: "House of the Dragon",
+  overview: "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+}
+
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

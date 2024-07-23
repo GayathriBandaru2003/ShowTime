@@ -45,7 +45,7 @@ const Header = () => {
     }
 
     return  (
-        <div className="absolute z-10 w-full px-7 py-2 bg-gradient-to-b from-black flex justify-between">
+        <div className="absolute z-10 w-full overflow-x-hidden m-0 px-7 py-2 bg-gradient-to-b from-black flex justify-between">
             <img className="w-40"
                src = {APP_LOGO}
                alt = "netflix logo"

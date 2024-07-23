@@ -1,7 +1,6 @@
 import MovieCard from "./MovieCard";
 
 const MovieList = ({title, movies}) => {
-    console.log(movies);
     return (
         movies && (
         <div className="py-4 px-2">

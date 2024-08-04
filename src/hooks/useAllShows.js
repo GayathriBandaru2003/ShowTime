@@ -1,17 +1,22 @@
 import { useEffect } from "react"
 import { urlConstants } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addAllShows } from "../utils/showsSlice";
+import axios from "axios";
 
 
 const useAllShows = () => {
-    
+
+    const dispatch = useDispatch();
+
     useEffect(() => {
         const fetchAllShows = async () => {
-            const data = await fetch(urlConstants?.fetchShowsUrl);
-            const result = await data.json();
-            console.log(result);
+            const response = await axios.get(urlConstants?.fetchShowsUrl);
+            console.log(response.data);
+            dispatch(addAllShows(response.data));
         }
         fetchAllShows();
-    }, []);
+    }, [dispatch]);
 }
 
 export default useAllShows;

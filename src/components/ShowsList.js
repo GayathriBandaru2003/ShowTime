@@ -47,7 +47,7 @@ const ShowsList = ({showsData, showsTitle}) => {
                 >
                     <MdOutlineKeyboardDoubleArrowLeft />
                 </button>
-                <ul className="flex">
+                <ul className="flex items-center">
                     {Array.from({ length: totalPages }, (_, index) => {
                         const tempPageNo = index + 1;
                         return (
@@ -55,7 +55,7 @@ const ShowsList = ({showsData, showsTitle}) => {
                             <button
                               type="button"
                               onClick={() => handleNumberPage(tempPageNo)}
-                              className={`w-12 h-12 text-lg font-medium ${tempPageNo === currentPage ? "active bg-[#b30000] border-[1px] border-[#b30000]" : ""} hover:bg-[#141414] border-[1px] border-[#262626] rounded-sm`}
+                              className={`w-12 h-12 text-lg font-medium ${tempPageNo === currentPage ? "active bg-[#b30000] border-[1px] border-[#b30000]" : "hover:bg-[#141414]"} border-[1px] border-[#262626] rounded-sm`}
                             >
                               {tempPageNo}
                             </button>

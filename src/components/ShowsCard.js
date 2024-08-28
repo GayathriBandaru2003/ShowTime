@@ -4,7 +4,7 @@ import { IoMdStar } from "react-icons/io";
 const ShowsCard = ({ itemData, itemType }) => {
   return (
     <Link className="py-0"
-      to={`/shows/${itemData?.id}`}
+      to={`shows/${itemData?.id}`}
     >
       <article className="card-info rounded-2xl text-white hover:relative hover:z-30 transition-all hover:scale-125 hover:drop-shadow-[0_0_4px_#000] group">
         <div className="card-img w-full h-60 overflow-hidden">

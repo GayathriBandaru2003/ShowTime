@@ -12,7 +12,6 @@ const Browse = () => {
         <div className="w-full overflow-hidden m-0 p-0">
             <Header />
             <Outlet />
-            
         </div>
     );
 };

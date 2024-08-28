@@ -12,7 +12,7 @@ const useAllShows = () => {
     useEffect(() => {
         const fetchAllShows = async () => {
             const response = await axios.get(urlConstants?.fetchShowsUrl);
-            console.log(response.data);
+            //console.log(response.data);
             dispatch(addAllShows(response.data));
         }
         fetchAllShows();

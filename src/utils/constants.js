@@ -25,6 +25,7 @@ export const API_URL = "https://api.tvmaze.com";
 export const urlConstants = {
   apiBaseUrl: API_URL,
   fetchShowsUrl: `${API_URL}/shows`,
+  seasonsCastEpisodesEmbed: "?embed[]=episodes&embed[]=cast&embed[]=seasons",
 };
 
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;

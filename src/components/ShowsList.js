@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import ShowsCard from "./ShowsCard";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
@@ -37,7 +38,11 @@ const ShowsList = ({showsData, showsTitle}) => {
         <div className="max-w-[1300px] my-0 mx-auto"> 
             <div className="shows-list grid grid-cols-7 gap-x-2 gap-y-6">
                 {currentShows?.map((show) => (
-                    <ShowsCard key={show.id} itemData={show} itemType="ALL_SHOWS"/>
+                    <Link key={show.id} className="py-0"
+                    to={`shows/${show?.id}`}
+                  >
+                    <ShowsCard itemData={show} itemType="ALL_SHOWS"/>
+                  </Link>
                 ))}
             </div>
             <div className="mt-10 flex items-center justify-center text-white">

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import useSingleShow from '../hooks/useSingleShow';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import SingleShowBanner from './SingleShowBanner';
 
 const ShowInfo = () => {
 
@@ -21,7 +22,9 @@ const ShowInfo = () => {
     return <h1>Loading...</h1>
 
   return (
-    <div className='text-5xl text-center text-black'>showinfo</div>
+    <div className='bg-black'>
+      {singleShowData && <SingleShowBanner showData={singleShowData} />}
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
@@ -9,6 +9,7 @@ import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const dispatch = useDispatch();
     const user = useSelector((store) => store.user);
     const showGptSearch = useSelector((store) => store.gpt.showGptSearch)
@@ -31,14 +32,18 @@ const Header = () => {
                 photoURL: photoURL,
               })
              );
-             navigate("/browse");
+              if (location.pathname === "/") {
+              navigate("/browse");
+              } else {
+                navigate(location.pathname);
+              }
             } else {
               dispatch(removeUser());
               navigate("/");
             }
         });
         return () => unsubscribe();
-    }, [dispatch, navigate]);
+    }, [dispatch, navigate, location.pathname]);
 
     const handleGptSearchClick = () => {
       dispatch(toggleGptSearchView())

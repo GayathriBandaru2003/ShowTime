@@ -1,11 +1,12 @@
 import { MdLanguage } from "react-icons/md";
 import { IoMdStar } from "react-icons/io";
+import { CiCalendar } from "react-icons/ci";
 
 const SingleShowBanner = ({ showData }) => {
   return (
     <section className="">
       <div className="my-0 mx-auto max-w-[1600px] px-0">
-        <div className="min-h-[654px] py-14 px-9 flex justify-center items-center"
+        <div className="min-h-[656px] py-14 px-9 flex justify-center items-center"
         style={{
           background: `linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0.00) 100%), url(${showData?.image?.original}) top/cover no-repeat fixed`,
         }}
@@ -34,13 +35,24 @@ const SingleShowBanner = ({ showData }) => {
                       {showData?.language}
                     </span>
                   </li>
-                  <li className="inline-flex items-center info-item">
+                </ul>
+              </div>
+              <div className="flex items-center flex-wrap gap-x-6">
+                <ul className="text-sm text-white gap-y-2 gap-x-6 flex items-center justify-center flex-wrap">
+                  <li className="inline-flex items-center">
                     <span className="inline-flex items-center justify-center text-lg mr-1">
-                      <IoMdStar />
+                      <CiCalendar />
                     </span>
-                    <span>
-                      {showData?.rating?.average}
-                    </span>
+                    <span className="title-text font-medium mr-1">Released Date :</span>
+                    <span className="font-normal text-[#cbd5e1]">{showData?.premiered}</span>
+                  </li>
+                  <li className="inline-flex items-center">
+                  <span className="inline-flex items-center justify-center text-lg mr-1">
+                    <IoMdStar />
+                  </span>
+                  <span>
+                    {showData?.rating?.average}
+                  </span>
                   </li>
                 </ul>
               </div>

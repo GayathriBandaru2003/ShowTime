@@ -13,7 +13,7 @@ const EpisodeItem = ({ episodeDetails }) => {
       <div className="col-start-3 col-end-9">
         <div className="">
           <h4 className="text-sm font-normal text-gray-300">Episode {episodeDetails?.number}</h4>
-          <h4 className="text-lg font-medium episode-title mb-1">{episodeDetails?.name}</h4>
+          <h4 className="text-lg font-medium mb-1">{episodeDetails?.name}</h4>
           <p
             className="text-xs font-normal text-gray-300"
             dangerouslySetInnerHTML={{

@@ -49,7 +49,7 @@ const Header = () => {
 
     return  (
         <div className="absolute z-10 w-full overflow-x-hidden m-0 px-7 py-2 flex justify-between">
-            <img className="w-40"
+            <img className="w-40 mt-1"
                src = {APP_LOGO}
                alt = "netflix logo"
             />
@@ -65,10 +65,11 @@ const Header = () => {
                    alt="usericon"
                 />
                 <button 
-                   className="font-bold p-1"
+                   className="bg-gray-600 text-white mx-2 py-1 px-2 bg-opacity-70
+                   hover:bg-opacity-40 rounded-sm flex items-center"
                    onClick={handleSignOut}
                 >
-                    (Sign Out)
+                    Sign Out
                 </button>
               </div>)}
         </div>

@@ -9,7 +9,7 @@ const Browse = () => {
     , []);
     
     return  (
-        <div className="w-full overflow-hidden m-0 p-0">
+        <div className="w-full overflow-x-hidden m-0 p-0">
             <Header />
             <Outlet />
         </div>

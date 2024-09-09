@@ -8,7 +8,7 @@ const ShowsCard = ({ itemData, itemType }) => {
         </div>
         <div className="card-data m hidden absolute left-0 w-full group-hover:block group-hover:bg-zinc-900 group-hover:p-2">
           <div className="flex items-center justify-between flex-wrap">
-            <div className="item-title text-sm font-medium">
+            <div className="item-title text-xs font-medium">
               {itemData?.name?.length > 16
                 ? itemData?.name?.substring(0, 16) + "..."
                 : itemData?.name}
@@ -17,7 +17,7 @@ const ShowsCard = ({ itemData, itemType }) => {
             {itemType === "ALL_SHOWS" && (
                 <>
                   <div className="rating flex items-center">
-                    <span className="text-sm text-green-500 mr-1"><IoMdStar /></span>
+                    <span className="text-xs text-green-500 mr-1"><IoMdStar /></span>
                     <p className="rating-value text-xs font-medium">
                       {itemData?.rating?.average || "NA"}
                     </p>
@@ -25,7 +25,7 @@ const ShowsCard = ({ itemData, itemType }) => {
                   <div className="genre">
                     <div className="py-2 text-xs">
                       <span className="font-medium">Genre{" "}:</span>{" "}
-                      <p className="py-2 inline font-light">
+                      <p className="py-2 inline text-[10px] font-light">
                         {itemData?.genres?.length > 0 &&
                           itemData?.genres?.join(", ")}
                       </p>

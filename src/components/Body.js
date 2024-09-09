@@ -27,7 +27,7 @@ const Body = () => {
     ]);
 
     return  (
-        <div>
+        <div className="font-poppins">
             <RouterProvider router = {appRouter} />
         </div>
     );

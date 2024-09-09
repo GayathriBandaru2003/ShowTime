@@ -87,7 +87,7 @@ const Login = () => {
         className="absolute w-1/3 p-12 my-24 mx-auto right-0 left-0 
                 bg-black text-white bg-opacity-80 rounded"
       >
-        <h1 className="font-bold text-3xl py-4">
+        <h1 className="font-semibold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
@@ -124,14 +124,14 @@ const Login = () => {
           {isSignInForm ? "New to Netflix? " : "Already Registered? "}
           {isSignInForm ? (
             <span
-              className="font-bold text-white cursor-pointer 
+              className="font-semibold text-white cursor-pointer 
                            hover:underline"
             >
               Sign Up Now.
             </span>
           ) : (
             <span
-              className="font-bold text-white cursor-pointer 
+              className="font-semibold text-white cursor-pointer 
                            hover:underline"
             >
               Sign In Now.

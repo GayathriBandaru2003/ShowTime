@@ -13,7 +13,7 @@ const SingleShowBanner = ({ showData }) => {
         >
           <div className="max-w-[1000px] mx-auto text-center">
             <h1 className="font-medium text-white text-3xl drop-shadow-[2px_2px_4px_#262626]">{showData?.name}</h1>
-            <div className="text-white mt-6"
+            <div className="text-white font-medium text-sm mt-6"
               dangerouslySetInnerHTML={{
                 __html: showData?.summary?.substring(0, 380) + " ...",
               }}>
@@ -22,7 +22,7 @@ const SingleShowBanner = ({ showData }) => {
               <div className="flex items-center flex-wrap gap-x-6">
                 <p className="text-sm text-[#cbd5e1]">
                   <span className="font-medium text-white">Genre :{" "}</span>
-                  <span className="font-normal">
+                  <span className="font-normal text-xs">
                     {showData?.genres?.join(", ")}
                   </span>
                 </p>
@@ -43,8 +43,8 @@ const SingleShowBanner = ({ showData }) => {
                     <span className="inline-flex items-center justify-center text-lg mr-1">
                       <CiCalendar />
                     </span>
-                    <span className="title-text font-medium mr-1">Released Date :</span>
-                    <span className="font-normal text-[#cbd5e1]">{showData?.premiered}</span>
+                    <span className="font-medium mr-1">Released Date :</span>
+                    <span className="font-normal text-xs text-[#cbd5e1]">{showData?.premiered}</span>
                   </li>
                   <li className="inline-flex items-center">
                   <span className="inline-flex items-center justify-center text-lg mr-1">

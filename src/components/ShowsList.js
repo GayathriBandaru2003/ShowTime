@@ -33,7 +33,7 @@ const ShowsList = ({showsData, showsTitle}) => {
       };
 
   return (
-    <section className="px-4 pb-10">
+    <section className="px-4 pb-16">
         <h1 className="text-white mb-2 px-3">{showsTitle}</h1>
         <div className="max-w-[1300px] my-0 mx-auto"> 
             <div className="shows-list grid grid-cols-7 gap-x-2 gap-y-6">
@@ -60,7 +60,7 @@ const ShowsList = ({showsData, showsTitle}) => {
                             <button
                               type="button"
                               onClick={() => handleNumberPage(tempPageNo)}
-                              className={`w-12 h-12 text-lg font-medium ${tempPageNo === currentPage ? "active bg-[#b30000] border-[1px] border-[#b30000]" : "hover:bg-[#141414]"} border-[1px] border-[#262626] rounded-sm`}
+                              className={`w-12 h-12 text-lg font-normal ${tempPageNo === currentPage ? "active bg-[#b30000] border-[1px] border-[#b30000]" : "hover:bg-[#141414]"} border-[1px] border-[#262626] rounded-sm`}
                             >
                               {tempPageNo}
                             </button>

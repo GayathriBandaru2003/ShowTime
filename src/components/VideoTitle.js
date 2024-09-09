@@ -5,21 +5,21 @@ const VideoTitle = ({title, overview}) => {
     return (
         <div className="w-full aspect-video pt-[18%] pl-14 absolute text-white 
           bg-gradient-to-r from-zinc-900">
-            <h1 className="text-5xl font-bold w-2/5">{title}</h1>
-            <p className="py-4 text-sm w-2/5">{overview}</p>
+            <h1 className="text-5xl font-semibold w-2/5">{title}</h1>
+            <p className="py-4 text-sm font-light w-2/5">{overview}</p>
             <div className="flex">
                 <button 
-                   className="bg-white text-black py-[6px] px-5 text-lg rounded-sm hover:bg-opacity-80
+                   className="bg-white text-black py-[6px] px-4 text-base rounded-sm hover:bg-opacity-80
                    flex items-center"
                 >
-                   <div className="px-1 text-xl"><FaPlay /></div>
+                   <div className="px-1 text-lg"><FaPlay /></div>
                    <span>Play</span>
                 </button>
                 <button 
-                   className="bg-gray-600 text-white mx-2 py-[6px] px-5 text-lg bg-opacity-70
+                   className="bg-gray-600 text-white mx-2 py-[6px] px-4 text-base bg-opacity-70
                    hover:bg-opacity-40 rounded-sm flex items-center"
                 >
-                    <div className="pr-1 text-2xl"><MdInfoOutline /></div>
+                    <div className="pr-1 text-xl"><MdInfoOutline /></div>
                    <span className="pl-1">More Info</span>
                 </button>
             </div>

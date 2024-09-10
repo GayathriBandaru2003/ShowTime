@@ -74,41 +74,41 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-full xl:max-w-[1536px] mx-auto my-0 p-0">
       <Header />
-      <div className="absolute">
-        <img
+      <div className="w-full absolute -z-10">
+        <img className="h-screen w-full object-cover"
           src={BG_URL}
           alt="bodyImage"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-1/3 p-12 my-24 mx-auto right-0 left-0 
-                bg-black text-white bg-opacity-80 rounded"
+        className="absolute w-5/6 sm:w-3/4 md:w-3/5 lg:w-1/2 xl:w-[450px] p-8 md:p-10 my-36 lg:my-24 mx-auto right-0 left-0 
+                bg-black text-white bg-opacity-60 rounded"
       >
-        <h1 className="font-semibold text-3xl py-4">
+        <h1 className="font-semibold text-3xl py-2">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
           <input
-            className="p-4 my-4 w-full rounded bg-black bg-opacity-50
-                    border border-slate-400"
+            className="p-4 my-4 w-full rounded bg-black bg-opacity-70
+                    border-none outline-none placeholder:text-sm placeholder-slate-400 focus:placeholder-slate-600"
             ref={name}
             type="text"
             placeholder="Full Name"
           />
         )}
         <input
-          className="p-4 my-4 w-full rounded bg-black bg-opacity-50
-                    border border-slate-400"
+          className="p-4 my-4 w-full rounded bg-black bg-opacity-70
+                    border-none outline-none placeholder:text-sm placeholder-slate-400 focus:placeholder-slate-600"
           ref={email}
           type="text"
           placeholder="Email Address"
         />
         <input
-          className="p-4 my-4 w-full rounded bg-black bg-opacity-50
-                    border border-slate-400"
+          className="p-4 my-4 w-full rounded bg-black bg-opacity-70
+                    border-none outline-none placeholder:text-sm placeholder-slate-400 focus:placeholder-slate-600"
           ref={password}
           type="password"
           placeholder="Password"
@@ -120,7 +120,7 @@ const Login = () => {
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
-        <p className="py-4 text-slate-400" onClick={toggleSignInForm}>
+        <p className="py-2 text-slate-400" onClick={toggleSignInForm}>
           {isSignInForm ? "New to Netflix? " : "Already Registered? "}
           {isSignInForm ? (
             <span

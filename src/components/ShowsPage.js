@@ -12,7 +12,7 @@ const ShowsPage = () => {
         return <h1>Loading...</h1>
     
   return (
-    <div>
+    <div className="max-w-full md:max-w-[1351px] mx-auto">
         <MainContainer />
         <SecondaryContainer allShowsData={allShowsData}/>
     </div>

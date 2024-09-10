@@ -6,14 +6,14 @@ const ShowCast = () => {
     const castData = useSelector((store) => store?.shows?.singleShow?._embedded?.cast)
 
   return (
-    <section className="text-white overflow-hidden p-6">
+    <section className="text-white overflow-hidden px-6 py-6">
         <h2 className="mb-2 text-xl font-medium">Cast</h2>
-        <div className="shows-list grid grid-cols-4 gap-x-6 gap-y-6">
+        <div className="shows-list grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 sm:gap-x-4 lg:gap-x-6 gap-y-6">
             {castData?.map((cast) => (
                 <div className=""
                   key={cast?.character?.id} 
                 >
-                    <div className="w-44 h-60 mb-1 rounded-sm overflow-hidden border-[1px] border-[#262626]">
+                    <div className="w-3/4 h-auto xs:w-40 xs:h-56 md:w-44 md:h-60 mb-1 rounded-sm overflow-hidden border-[1px] border-[#262626]">
                         <img className="w-full h-full object-cover"
                           src={cast?.character?.image?.medium} alt={cast?.character?.name}
                         />

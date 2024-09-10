@@ -21,6 +21,7 @@ const Header = () => {
           .catch((error) => {
             navigate("/error");
           });
+        setShowLinks(!showLinks);
     };
 
     useEffect( () => {
@@ -53,11 +54,12 @@ const Header = () => {
 
     const handleHomeClick = () => {
       navigate("/browse");
+      setShowLinks(!showLinks);
     }
 
     return  (
-        <section className="max-w-full xl:max-w-[1350px] mx-auto fixed top-0 z-30 w-full overflow-x-hidden md:backdrop-blur-md flex flex-col md:flex-row md:justify-between m-0">
-          <div className='w-full md:w-auto flex items-center justify-between backdrop-blur-md'>
+        <section className={`max-w-full xl:max-w-[1351px] mx-auto fixed top-0 z-30 w-full overflow-x-hidden ${user ? 'md:backdrop-blur-md' : ''} flex flex-col md:flex-row md:justify-between m-0`}>
+          <div className={`w-full md:w-auto flex items-center justify-between ${user ? 'backdrop-blur-md' : ''}`}>
             <img className="w-40 h-12 mt-2 pl-4"
                src = {APP_LOGO}
                alt = "netflix logo"

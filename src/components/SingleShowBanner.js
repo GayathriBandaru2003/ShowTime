@@ -5,7 +5,7 @@ import { CiCalendar } from "react-icons/ci";
 const SingleShowBanner = ({ showData }) => {
   return (
     <section className="">
-      <div className="my-0 mx-auto max-w-[1600px] px-0">
+      <div className="my-0 mx-auto max-w-[1351px] px-0">
         <div className="min-h-[656px] py-14 px-9 flex justify-center items-center"
         style={{
           background: `linear-gradient(0deg, #141414 0%, rgba(20, 20, 20, 0.00) 100%), url(${showData?.image?.original}) top/cover no-repeat fixed`,

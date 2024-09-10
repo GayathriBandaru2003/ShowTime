@@ -27,10 +27,10 @@ const ShowInfo = () => {
   ) : (
     <div className='bg-[#141414]'>
       {singleShowData && <SingleShowBanner showData={singleShowData} />}
-      <div className='max-w-[90vw] md:w-[70vw] md:max-w-[956px] mx-auto px-4'>
+      <div className='max-w-full md:w-[80vw] md:max-w-[956px] mx-auto sm:px-4'>
         {singleShowData && <ShowDetails />}
       </div>
-      <div className='max-w-[90vw] md:w-[70vw] md:max-w-[956px] mx-auto px-4'>
+      <div className='max-w-full md:w-[80vw] md:max-w-[956px] mx-auto sm:px-4'>
         <ShowCast />
       </div>
     </div>

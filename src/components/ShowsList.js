@@ -35,7 +35,7 @@ const ShowsList = ({showsData, showsTitle}) => {
   return (
     <section className="px-4 pb-16">
         <h1 className="text-white mb-2 px-3 text-xs sm:text-sm md:text-base">{showsTitle}</h1>
-        <div className="max-w-[1351px] my-0 mx-auto"> 
+        <div className="max-w-[1351px] my-0 mx-auto px-5"> 
             <div className="shows-list grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-x-2 gap-y-6">
                 {currentShows?.map((show) => (
                     <Link key={show.id} className="py-0"

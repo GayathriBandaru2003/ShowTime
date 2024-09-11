@@ -2,12 +2,12 @@ import { IoMdStar } from "react-icons/io";
 
 const ShowsCard = ({ itemData, itemType }) => {
   return (
-      <article className="card-info rounded-2xl text-white hover:relative hover:z-30 transition-all hover:scale-125 hover:drop-shadow-[0_0_4px_#000] group">
-        <div className="card-img w-full h-72 xs:h-60 overflow-hidden">
+      <article className={`card-info rounded-2xl text-white ${itemType === "ALL_SHOWS" ? 'hover:relative hover:z-30 transition-all hover:scale-125 hover:drop-shadow-[0_0_4px_#000] group' : ''}`}>
+        <div className="w-full h-72 xs:h-60 overflow-hidden">
           <img className="w-full h-full aspect-auto" src={itemData?.image?.medium} alt={itemData?.name} />
         </div>
-        <div className="card-data m hidden absolute left-0 w-full group-hover:block group-hover:bg-zinc-900 group-hover:p-2">
-          <div className="flex items-center justify-between flex-wrap">
+        <div className={`${itemType === "ALL_SHOWS" ? 'hidden absolute left-0 w-full group-hover:block group-hover:bg-zinc-900 group-hover:p-2' : ''}`}>
+          <div className={`${itemType === "ALL_SHOWS" ? 'flex items-center justify-between flex-wrap' : 'hidden'}`}>
             <div className="item-title text-xs font-medium">
               {itemData?.name?.length > 16
                 ? itemData?.name?.substring(0, 16) + "..."
@@ -32,7 +32,10 @@ const ShowsCard = ({ itemData, itemType }) => {
                     </div>
                   </div>
                 </>
-              )}
+              )
+            }
+
+            
           </div>
         </div>
       </article>

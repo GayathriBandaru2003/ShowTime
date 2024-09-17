@@ -3,6 +3,7 @@ import Browse from "./Browse";
 import Login from "./Login";
 import ShowInfo from "./ShowInfo";
 import ShowsPage from "./ShowsPage";
+import { SearchPage } from "./SearchPage";
 
 const Body = () => {
     const appRouter = createBrowserRouter([
@@ -17,6 +18,10 @@ const Body = () => {
                 {
                     path: "/browse",
                     element: <ShowsPage />
+                },
+                {
+                    path: "search",
+                    element: <SearchPage />
                 },
                 {
                     path: "shows/:id",

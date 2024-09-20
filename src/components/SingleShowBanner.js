@@ -3,6 +3,7 @@ import { IoMdStar } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
 
 const SingleShowBanner = ({ showData }) => {
+  const cleanText = showData?.summary?.replace(/<\/?[^>]+(>|$)/g, "");
   return (
     <section className="">
       <div className="my-0 mx-auto max-w-[1351px] px-0">
@@ -13,10 +14,8 @@ const SingleShowBanner = ({ showData }) => {
         >
           <div className="max-w-[1000px] mx-auto text-center">
             <h1 className="font-medium text-white text-3xl drop-shadow-[2px_2px_4px_#262626]">{showData?.name}</h1>
-            <div className="text-white font-medium text-sm mt-6"
-              dangerouslySetInnerHTML={{
-                __html: showData?.summary?.substring(0, 380) + " ...",
-              }}>
+            <div className="text-white font-medium text-sm mt-6">
+                {showData?.summary?.length > 380 ? cleanText?.substring(0, 380) + " ..." : cleanText}
             </div>
             <div className="mt-6 gap-y-4 flex flex-col items-center">
               <div className="flex items-center flex-wrap gap-x-6">

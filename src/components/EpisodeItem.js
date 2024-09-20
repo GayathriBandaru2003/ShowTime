@@ -17,7 +17,7 @@ const EpisodeItem = ({ episodeDetails }) => {
           <p
             className="text-xs font-normal text-gray-300"
             dangerouslySetInnerHTML={{
-              __html: episodeDetails?.summary.length > 240 ? episodeDetails?.summary?.substring(0, 240) + " ..." : episodeDetails?.summary,
+              __html: episodeDetails?.summary?.length > 240 ? episodeDetails?.summary?.substring(0, 240) + " ..." : episodeDetails?.summary,
             }}
           ></p>
         </div>

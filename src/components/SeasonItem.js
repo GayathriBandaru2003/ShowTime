@@ -8,7 +8,7 @@ const SeasonItem = ({ seasonData }) => {
   //console.log(episodesData);
   return (
     <section className="text-left">
-      <h3 className="text-sm text-gray-300">{seasonData?.episodeOrder} Episodes</h3>
+      <h3 className="text-sm text-gray-300">{seasonData?.episodeOrder !== null ? seasonData?.episodeOrder: "0"} Episodes</h3>
       {episodesData && (
         <EpisodeList seasonNum={seasonData?.number} episodesData={episodesData} />
       )}

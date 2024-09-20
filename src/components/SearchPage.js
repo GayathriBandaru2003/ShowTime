@@ -34,7 +34,7 @@ export const SearchPage = () => {
               alt="searchbg"
             />
         </div>
-        <div className='max-w-[780px] mx-auto relative z-0'>
+        <div className='max-w-[780px] mx-auto relative z-40'>
           <div className="h-[500px] flex justify-center mt-[18%] text-center">
             <h1
               className="flex items-center h-[40px] py-4 px-2 xs:mx-2 text-white text-sm sm:text-lg md:text-xl font-medium rounded-sm bg-transparent"
@@ -57,7 +57,7 @@ export const SearchPage = () => {
                     
                 />
                 {searchQuery?.length !== 0 && showAllSuggestions && (
-                  <div className='w-3/4 xs:w-2/3 sm:w-3/5 md:w-1/2 absolute top-[40px] z-10 rounded-sm border-slate-400 outline-none bg-transparent backdrop-blur-lg text-sm text-white'>
+                  <div className='w-3/4 xs:w-2/3 sm:w-3/5 md:w-1/2 absolute top-[40px] z-50 rounded-sm border-slate-400 outline-none bg-transparent backdrop-blur-lg text-sm text-white'>
                     {allSuggestions?.length === 0 ? (
                       <p className="p-2 pl-4 text-left border-slate-400 border-[1px] border-t-0 outline-none">No data found...</p>
                     ) : (

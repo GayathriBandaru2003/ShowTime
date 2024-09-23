@@ -12,7 +12,6 @@ const SeasonList = () => {
     
     useEffect(() => {
       setSeasonDetails(seasonsData[seasonVal]);
-      console.log(seasonVal);
     }, [seasonVal, seasonsData]);
 
     const handleSeasonChange = (event) => {

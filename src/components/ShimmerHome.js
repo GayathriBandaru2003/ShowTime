@@ -21,7 +21,7 @@ const ShimmerHome = () => {
             <div className="w-[100px] md:w-[200px] h-4 md:h-6  bg-gray-300 animate-pulse rounded-xl"></div>
           </div>
           <div className="mx-auto">
-            <div className="flex flex-wrap justify-evenly gap-x-1 mx-auto">
+            <div className="flex flex-wrap justify-evenly gap-x-1 mx-auto px-2">
               {Array.from({length: 20}).map((_, index) => {
                 return <div className="mb-3 w-44 h-64 bg-gray-300 animate-pulse"></div>
               })}

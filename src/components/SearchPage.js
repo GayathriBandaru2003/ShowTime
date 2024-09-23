@@ -35,7 +35,7 @@ export const SearchPage = () => {
             />
         </div>
         <div className='max-w-[780px] mx-auto relative z-40'>
-          <div className="h-[500px] flex justify-center mt-[18%] text-center">
+          <div className="h-[500px] flex justify-center mt-[46%] xxs:mt-[36%] xs:mt-[32%] sm:mt-[28%] md:mt-[18%] text-center">
             <h1
               className="flex items-center h-[40px] py-4 px-2 xs:mx-2 text-white text-sm sm:text-lg md:text-xl font-medium rounded-sm bg-transparent"
             >

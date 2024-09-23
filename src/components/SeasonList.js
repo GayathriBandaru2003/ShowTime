@@ -9,7 +9,6 @@ const SeasonList = () => {
     const [seasonDetails, setSeasonDetails] = useState(null);
 
     const seasonsData = useSelector((store) => store?.shows?.singleShow?._embedded?.seasons);
-    //console.log(seasonsData);
     
     useEffect(() => {
       setSeasonDetails(seasonsData[seasonVal]);

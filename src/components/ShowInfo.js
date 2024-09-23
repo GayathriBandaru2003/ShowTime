@@ -1,29 +1,29 @@
 import { useParams } from 'react-router-dom'
 import useSingleShow from '../hooks/useSingleShow';
-import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import SingleShowBanner from './SingleShowBanner';
 import ShowDetails from './ShowDetails';
 import ShowCast from './ShowCast';
+import ShimmerSingleShow from './ShimmerSingleShow';
+import { addSingleShow } from '../utils/showsSlice';
+import { useDispatch } from 'react-redux';
 
 const ShowInfo = () => {
 
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   useEffect(() => 
     window.scrollTo(0, 0)
 , []);
 
-  //console.log(id);
-  useSingleShow(id);
-
-  const singleShowData = useSelector((store) => store?.shows?.singleShow);
-  console.log(singleShowData);
-
+  const singleShowData = useSingleShow(id);
+  if(singleShowData !== null)
+    dispatch(addSingleShow(singleShowData));
   
 
   return singleShowData === null ? (
-    <h1>Loading...</h1>
+    <ShimmerSingleShow />
   ) : (
     <div className='bg-[#141414]'>
       {singleShowData && <SingleShowBanner showData={singleShowData} />}

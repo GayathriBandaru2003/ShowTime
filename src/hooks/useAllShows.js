@@ -12,10 +12,14 @@ const useAllShows = () => {
     useEffect(() => {
         const fetchAllShows = async () => {
             const response = await axios.get(urlConstants?.fetchShowsUrl);
-            //console.log(response.data);
             dispatch(addAllShows(response.data));
         }
-        fetchAllShows();
+        const timerId = setTimeout(() => {
+            fetchAllShows();
+        }, 2000)
+        return () => {
+            clearTimeout(timerId);
+        };
     }, [dispatch]);
 }
 

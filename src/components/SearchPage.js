@@ -28,8 +28,8 @@ export const SearchPage = () => {
 
   return (
     <section className="max-w-full xl:max-w-[1351px] overflow-x-hidden my-0 mx-auto p-0">
-        <div className='w-full absolute -z-10 overflow-hidden top-0 left-0'>
-            <img className="h-[105vh] w-full object-cover"
+        <div className='w-full absolute z-10 overflow-hidden top-0 left-0'>
+            <img className="h-screen w-full object-cover"
               src={SEARCH_BG_URL} 
               alt="searchbg"
             />
